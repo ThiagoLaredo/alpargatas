@@ -1,0 +1,211 @@
+.intro-programa {
+    padding: 4rem 0;
+    background-color: var(--cinza100);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card-programa {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-width: 1000px;
+}
+
+.card-programa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-programa-header {
+    padding: 24px;
+    background: #f1f3f5;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card-programa-header-botoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.botao-minimizar,
+.botao-expandir,
+.botao-fechar {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.botao-minimizar:hover,
+.botao-expandir:hover,
+.botao-fechar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.botao-minimizar svg,
+.botao-expandir svg,
+.botao-fechar svg {
+    display: block;
+}
+
+.card-programa > img:first-of-type {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.card-programa-texto {
+    padding: 120px 40px 20px 40px;
+    max-width: 600px;
+}
+
+.card-programa-texto p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card-programa-texto a {
+    display: inline-block;
+    margin: 15px 0 30px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card-programa > img:last-of-type {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cores específicas para cada card */
+
+  .card-programa.trainee-industrial {
+    border: 1px solid transparent;
+    border-radius: 16px; /* ajuste conforme seu design */
+    background: 
+      linear-gradient(white, white) padding-box,
+      linear-gradient(
+        to right,
+        var(--azul-escuro),
+        var(--azul-meio),
+        var(--azul-claro)
+      ) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    position: relative; /* cria o contexto para o absolute */
+  }
+  
+  .card-programa.trainee-industrial img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 400px; /* opcional: controla o tamanho */
+    height: auto; /* mantém a proporção da imagem */
+  }
+  
+
+.trainee-industrial .card-programa-header {
+    background: linear-gradient(
+        to right,
+        var(--azul-escuro),
+        var(--azul-meio),
+        var(--azul-claro)
+    );
+}
+
+.intro-programa-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.intro-programa-item {
+  flex: 1;
+  padding: 40px 80px;
+  text-align: left;
+  border-radius: 16px;
+  background: linear-gradient(
+    to right,
+    var(--azul-escuro),
+    var(--azul-meio),
+    var(--azul-claro)
+  );
+  min-height: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elemento de decoração SVG */
+.decoracao-svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.7;
+  pointer-events: none; /* Permite interação com elementos abaixo */
+}
+
+.intro-programa-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 85px;
+  height: 300px;
+  background: linear-gradient(
+    to bottom,
+    var(--verde-claro) 0%,
+    var(--verde-claro) 60%,
+    var(--verde-escuro) 100%
+  );      
+  transform: skew(10deg);
+  transform-origin: bottom left;
+  z-index: 1;
+}
+
+.intro-programa-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--branco);
+  background: linear-gradient(
+    to right,
+    var(--verde-claro),
+    var(--verde-escuro)
+  );
+  padding: 15px 30px;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 8px;
+  position: relative;
+  z-index: 3; /* Garante que o título fique acima dos elementos decorativos */
+}
+
+.intro-programa-item p {
+  font-size: 1rem;
+  color: var(--branco);
+  line-height: 2;
+  max-width: 80%;
+  position: relative;
+  z-index: 3; /* Garante que o texto fique acima dos elementos decorativos */
+}

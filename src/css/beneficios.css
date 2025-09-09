@@ -1,0 +1,85 @@
+.beneficios {
+    padding: 80px 0;
+}
+
+.beneficios h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 40px;
+}
+
+.beneficios p {
+    text-align: left;
+    color: var(--cinza700);
+}
+
+.beneficios-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem; 
+  }
+
+  .beneficios-lista {
+    display: flex;
+    flex-wrap: wrap;             /* permite quebrar em várias linhas */
+    justify-content: center;     /* centraliza os itens */
+    gap: 2rem;                   /* espaçamento entre os itens */
+  }
+  
+  .beneficios-item {
+    flex: 0 1 calc(33.333% - 2rem); /* 3 colunas */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--verde-claro), var(--verde-escuro)) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+/* 
+.beneficios-item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--verde-claro), var(--verde-escuro)) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+} */
+
+
+.beneficios-item .icon-wrapper:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficios-item .icon-wrapper img {
+    max-width: 60%;  /* controla o tamanho do ícone dentro do círculo */
+    max-height: 60%;
+}
+
+.beneficios-item h3 {   
+    background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    text-align: left;
+}
+
+
+
+

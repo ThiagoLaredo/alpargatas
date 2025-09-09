@@ -1,0 +1,69 @@
+.programas-sobre {
+    padding: 4rem 0;
+  }
+
+  .programas-sobre .container-medium {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+  
+  
+  .programas-sobre img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .programas-sobre_texto {
+    width: 50%;
+  }
+  
+  .programas-sobre_texto h2 {
+    color: var(--azul-meio);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .programas-sobre_texto h3 {
+    position: relative; /* necessário para que o ::before fique relativo ao h3 */
+    color: white;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    display: inline-block; /* para que o tamanho do ::before acompanhe o texto */
+  }
+  
+  .programas-sobre_texto h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--azul-meio);
+    z-index: -1; /* coloca atrás do texto */
+    border-radius: 0.2rem; /* opcional, deixa cantos arredondados */
+  }
+  
+  
+  .programas-sobre_texto p {
+    color: var(--cinza500);
+    line-height: 2;
+  }
+  
+  /* Versão responsiva para mobile */
+  @media (max-width: 768px) {
+    .container-medium {
+      flex-direction: column;
+    }
+    
+    .container-medium img,
+    .programas-sobre_texto {
+      width: 100%;
+    }
+    
+    .container-medium img {
+      margin-bottom: 1.5rem;
+    }
+  }

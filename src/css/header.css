@@ -37,7 +37,7 @@
   padding: .4rem 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   gap: 4rem;
 }
@@ -51,9 +51,11 @@ ul[data-menu="list"] {
 
 .menu li a,
 .menu li span {
-  font: 400 1rem/1.2 'Inter', sans-serif;
-  color: var(--text);
+  font: 400;
+  color: var(--branco);
   display: flex;
+  font-size: 1rem;
+  text-transform: uppercase;  
   gap: 4px;
   justify-content: center;
   text-decoration: none;
