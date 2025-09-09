@@ -3,7 +3,6 @@ import "../../css/header.css";
 import "../../css/introducao.css";
 import "../../css/alpa.css";
 import "../../css/programas-sobre.css";
-import "../../css/video.css";
 import "../../css/programas.css";
 import "../../css/fases.css";
 import  "../../css/jornada.css";
@@ -15,8 +14,6 @@ import "../../css/faq.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/cores.css";
-import "../../css/componentes.css";
-import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import FAQ from '../modules/faq.js';

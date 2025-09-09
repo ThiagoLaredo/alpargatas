@@ -47,3 +47,15 @@
     font-size: 1rem;
     color: var(--cinza500);
 }
+
+@media (max-width: 768px) {
+    .fases-programa-lista {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fases-programa-item {
+        width: 100%;
+        min-height: auto;
+    }
+}

@@ -27,7 +27,7 @@
 .header.header-scrolled  {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.85); /* branco com 85% de opacidade */
+  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 } 
 

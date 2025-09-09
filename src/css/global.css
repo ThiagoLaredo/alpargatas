@@ -9,6 +9,10 @@ html, body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button {
   all: unset;
 }
