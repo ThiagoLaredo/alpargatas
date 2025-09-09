@@ -18,8 +18,7 @@ import "../../css/cores.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import FAQ from '../modules/faq.js';
-import HeaderScroll from '../modules/header-scroll.js';
-import HeaderManager from '../modules/HeaderManager.js'; 
+import FooterScroll from '../modules/footer-scroll.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import VideoPopup from '../modules/VideoPopup.js';
 
@@ -41,15 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
     }
 
-    // 1. INICIALIZE O HEADER MANAGER PRIMEIRO (novo código)
-    const headerManager = new HeaderManager('.header');
-
-    // 2. DEPOIS INICIALIZE O HEADER SCROLL (código existente)
-    const headerEl = document.querySelector('.header');
-    if (headerEl) {
-        const headerScroll = new HeaderScroll('.footer-float');
-        headerScroll.init();
-    }
+    //  FOOTER SCROLL 
+    const footerScroll = new FooterScroll('.footer-float');
+    footerScroll.init();
+    
 
     const thumbnailEl = document.querySelector('#videoThumbnail');
     if (thumbnailEl) {

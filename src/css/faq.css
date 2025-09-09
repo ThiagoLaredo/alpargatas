@@ -11,7 +11,8 @@
 
 /* Título da seção */
 .faq-title {
-    text-align: center;
+    font-weight: 300;
+    text-align: left;
     margin-bottom: 40px;
     color: var(--verde-escuro);
     font-size: 2rem;
@@ -19,22 +20,25 @@
 
 /* Itens do FAQ */
 .faq-item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
     background-color: #E8E8E8;
     transition: all 0.3s ease;
 }
 
-.faq-item:hover {
+/* .faq-item:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /* Botão de pergunta */
 .faq-question {
     width: 100%;
-    text-align: left;
+    box-sizing: border-box; /* garante que padding não estoure */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     font-size: 1.1rem;
     font-weight: 300;
@@ -43,11 +47,8 @@
     border: none;
     outline: none;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s ease;
-}
+  }
+  
 
 .faq-question:hover {
     background-color: #f8f9fa;
@@ -74,9 +75,16 @@
 }
 
 .faq-item.active .faq-answer {
-    max-height: 2000px; /* Aumentei significativamente para conteúdo longo */
-    padding: 0 20px 20px 20px; /* Adicionei padding na parte inferior */
+    max-height: 3000px; /* Aumentei significativamente para conteúdo longo */
+    padding: 10px; 
+    background-color: #fff;
+    /* border-radius: 16px; */
+    margin: 0;
 }
+
+.faq-question i {
+    color: #4b5563; 
+  }
 
 /* Responsividade */
 @media (max-width: 768px) {

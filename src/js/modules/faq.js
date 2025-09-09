@@ -31,7 +31,7 @@ export default class FAQ {
 
     openItem(item) {
         item.classList.add('active');
-        
+    
         // Animação GSAP para abrir
         const answer = item.querySelector('.faq-answer');
         const inner = item.querySelector('.faq-answer-inner');
@@ -41,15 +41,23 @@ export default class FAQ {
             duration: 0.3,
             ease: "power1.out"
         });
+    
+        // Gira a seta
+        const icon = item.querySelector('.faq-question i');
+        gsap.to(icon, {
+            rotate: 180,
+            duration: 0.3,
+            ease: "power1.out"
+        });
         
-        // Adiciona aria-expanded para acessibilidade
+        // Acessibilidade
         const question = item.querySelector('.faq-question');
         question.setAttribute('aria-expanded', 'true');
     }
-
+    
     closeItem(item) {
         item.classList.remove('active');
-        
+    
         // Animação GSAP para fechar
         const answer = item.querySelector('.faq-answer');
         
@@ -58,9 +66,17 @@ export default class FAQ {
             duration: 0.3,
             ease: "power1.in"
         });
+    
+        // Volta a seta
+        const icon = item.querySelector('.faq-question i');
+        gsap.to(icon, {
+            rotate: 0,
+            duration: 0.3,
+            ease: "power1.in"
+        });
         
-        // Atualiza aria-expanded para acessibilidade
+        // Acessibilidade
         const question = item.querySelector('.faq-question');
         question.setAttribute('aria-expanded', 'false');
-    }
+    }    
 }
