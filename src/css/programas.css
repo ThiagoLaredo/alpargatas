@@ -209,3 +209,48 @@
   position: relative;
   z-index: 3; /* Garante que o texto fique acima dos elementos decorativos */
 }
+
+@media (max-width: 768px) {
+
+  .intro-programa-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-programa-item {
+    padding: 20px 40px;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .intro-programa-item h3 {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+
+  .intro-programa-item p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .card-programa {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .card-programa-texto {
+    padding: 80px 20px 20px 20px;
+    max-width: 100%;
+  }
+
+  .card-programa > img:first-of-type {
+    position: static;
+    width: 150px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .card-programa > img:last-of-type {
+    height: auto;
+  }
+}

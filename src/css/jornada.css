@@ -94,3 +94,18 @@
     max-width: 100%;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .jornada-conteudo {
+        flex-direction: column;
+    }
+
+    .jornada-lista {
+        width: 100%;
+    }
+
+    .jornada-imagem {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

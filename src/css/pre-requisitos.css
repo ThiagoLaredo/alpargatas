@@ -63,7 +63,42 @@
   }
 
 
-  
+  @media (max-width: 768px) {   
+    .pre-requisitos-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pre-requisitos-card img {
+        margin: 0;
+        width: 50%;
+    }
+
+    .pre-requisitos-conteudo {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .pre-requisitos-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .pre-requisitos-card p {
+        font-size: 1rem;
+    }
+
+    .pre-requisitos-card ul {
+        padding: 0;
+    }
+
+    .pre-requisitos-card li {
+        justify-content: center;
+        gap: 10px; 
+        margin-bottom: 10px; 
+    }
+  }
+
   
   
 
