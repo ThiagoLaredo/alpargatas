@@ -1,22 +1,29 @@
 import "../../css/global.css";
 import "../../css/header.css";
 import "../../css/introducao.css";
-import "../../css/pq-escolher.css";
+import "../../css/alpa.css";
+import "../../css/programas-sobre.css";
+import "../../css/video.css";
+import "../../css/programas.css";
+import "../../css/fases.css";
+import  "../../css/jornada.css";
+import "../../css/etapas.css";
+import "../../css/pre-requisitos.css";
+import "../../css/beneficios.css";
+import "../../css/banner-inscricao.css";
+import "../../css/faq.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/cores.css";
 import "../../css/componentes.css";
-import "../../css/potencialize-resultados.css";
-import "../../css/agentes-inteligentes.css";
 import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
+import FAQ from '../modules/faq.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import HeaderManager from '../modules/HeaderManager.js'; 
-import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import VideoPopup from '../modules/VideoPopup.js';
-import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -62,11 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPageOpenAnimations();
     initScrollAnimations();
 
-    // Inicializa a classe
-    new FormHandler('.contact-form');
-
-    const swiperEl = document.querySelector('.agents-swiper');
-    if (swiperEl) {
-        new SwiperAgentsSlider();
-    }
+    // Inicializa a classe FAQ
+    new FAQ('.faq-item');
 });

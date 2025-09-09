@@ -1,0 +1,34 @@
+.video {
+    padding: 4rem 0;
+}
+
+.video .container-small {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 860px;
+}
+
+.video .container-small h2 {
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 44px;
+    color: var(--verde);
+    max-width: 30ch;
+}
+
+.video .container-small p {
+    font-size: 1rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--verde);
+    text-align: center;
+}
+
+.video .container-small video {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}

@@ -1,46 +1,27 @@
+/* cores.css */
+
+/* Variáveis de cores */
 :root {
-  --textwhite: #FAFAFA;
-  --text: #28302E;
-  --bg-branco: #fff;
-  --primary: #6751D1;
-  --secondary: #13B4EE;
-  --bgroxo: #d3cbff;
-  --primary-rgb: 103, 81, 209; /* Valores RGB da cor primária */
-  --secondary-rgb: 19, 180, 238; /* Valores RGB da cor secundária */
-  --textwhite-rgb: 250, 250, 250; /* Exemplo de valores RGB para branco */
-  --text-rgb: 0, 0, 0; /* Exemplo de valores RGB para branco */
-  --degradeazul: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
-}
+  --branco: #ffffff;
+  --verde-claro: rgba(172, 195, 85, 1);
+  --verde-escuro: rgba(30, 188, 85, 1);
+  --azul-meio: rgba(0, 159, 222, 1);
+  --azul-escuro: rgba(0, 115, 185, 1);
+  --azul-claro: rgba(0, 208, 248, 1);
 
-.textwhite {
-  color: var(--textwhite);
-}
+  /* degradê horizontal */
+  --degrade-verde: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+  --preto: #000000;
 
-.text {
-  color: var(--text);
+  /* Escala de cinzas */
+  --cinza50:  #fafafa;
+  --cinza100: #f5f5f5;
+  --cinza200: #e5e5e5;
+  --cinza300: #d4d4d4;
+  --cinza400: #a3a3a3;
+  --cinza500: #737373;
+  --cinza600: #525252;
+  --cinza700: #404040;
+  --cinza800: #262626;
+  --cinza900: #171717;
 }
-.bg {
-  background-color: var(--bg);
-}
-.bg-escuro {
-  background-color: var(--bg-branco);
-}
-
-.bg-roxo {
-  background-color: var(--bgroxo);
-}
-
-.degradeazul {
-  background: var(--degradeazul);
-}
-
-.primary {
-  color: var(--primary);
-}
-
-.secondary {
-  color: var(--secondary);
-}
-
-
-

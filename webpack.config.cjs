@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 
@@ -11,7 +10,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const PATHS = { src: path.join(__dirname, 'src') };
 
-const pages = ['index', 'sobre', 'depoimentos', 'plataforma', 'planos', 'politica-privacidade'];
+const pages = ['index', 'politica-privacidade'];
 
 const entryPoints = pages.reduce((entries, page) => {
   const jsPath = `./src/js/pages/${page}.js`;
@@ -133,7 +132,6 @@ module.exports = (env, argv) => {
           // Assets estáticos
           { from: 'src/imgs', to: 'imgs' },
           { from: 'src/videos', to: 'videos' },
-          { from: 'src/legendas.vtt', to: 'legendas.vtt' },
           
           // Font Awesome (ícones)
           {
@@ -181,4 +179,4 @@ module.exports = (env, argv) => {
       ],
     },
   };
-};
+};   

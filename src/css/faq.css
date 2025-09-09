@@ -1,0 +1,95 @@
+.faq {
+    padding-bottom: 80px;
+}
+
+/* Container principal */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Título da seção */
+.faq-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--verde-escuro);
+    font-size: 2rem;
+}
+
+/* Itens do FAQ */
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #E8E8E8;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Botão de pergunta */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #000;
+    background-color: rgb(232, 232, 232);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+/* Resposta */
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background-color: #fff;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    padding-bottom: 20px;
+}
+
+/* Estado ativo - ALTERAÇÃO CRÍTICA AQUI */
+.faq-item.active .faq-question {
+    background-color: #f8f9fa;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 2000px; /* Aumentei significativamente para conteúdo longo */
+    padding: 0 20px 20px 20px; /* Adicionei padding na parte inferior */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 1.8rem;
+    }
+    
+    .faq-question {
+        padding: 16px;
+        font-size: 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        max-height: 3000px; /* Valor ainda maior para mobile */
+    }
+}

@@ -3,10 +3,6 @@ body, h1, h2, h3, h4, p, ul, li, a {
   padding: 0;
 }
 
-/* h1, h2, h3, h4, p, ul, li, a {
-  will-change: opacity, transform;
-} */
-
 html, body {
   /* height: 100%; */
   margin: 0;
@@ -19,7 +15,7 @@ button {
 
 body {
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .swiper-slide {
@@ -59,6 +55,22 @@ body.preload .header_acoes a {
 
 .container {
   max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto;
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  padding: 0 1.25rem;
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.container-small {
+  max-width: 800px; /* Largura máxima do container */
+  margin: 0 auto;
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  padding: 0 1.25rem;
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.container-medium {
+  max-width: 1000px; /* Largura máxima do container */
   margin: 0 auto;
   width: 100%; /* Faz o container ocupar toda a largura disponível */
   padding: 0 1.25rem;
@@ -109,6 +121,23 @@ img {
   opacity: 0;
 }
 
+:root {
+  --fonte-principal: "Ubuntu", sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-weight: 300; /* aplica leveza globalmente */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+p, li, a, span, button {
+  font-weight: 300;
+  line-height: 1.6; /* melhora a legibilidade */
+}
 
 /* iPad Portrait (768px-1024px) Header Adjustments */
 @media only screen 

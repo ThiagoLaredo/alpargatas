@@ -1,0 +1,73 @@
+.banner-inscricao {
+    padding: 80px 0;
+    background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
+    position: relative;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 0;
+}
+
+.banner-inscricao img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;                 /* centraliza horizontalmente */
+    transform: translateX(-50%);
+    max-width: auto;
+    height: 500px; 
+    z-index: 2;
+    pointer-events: none;      /* não atrapalha cliques */
+    user-select: none;         /* não permite seleção */
+}
+
+.banner-inscricao img:nth-of-type(2) {
+    position: absolute;
+    bottom: 50%; /* vertical relativo ao bottom */
+    left: 50%;   /* horizontal relativo ao left */
+    transform: translate(30%, 30%);  /* x → 30% para a direita, y → 50% para cima */
+    max-width: 311px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.btn-cta-inscricao {
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.btn-cta-inscricao:hover {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.experiencias {
+    padding: 0;
+    background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experiencias h2 {
+    color: var(--branco);
+    font-weight: 300;
+    font-size: 2.25rem;
+    text-align: center;
+}
