@@ -28,7 +28,7 @@
   }
 
 /* header scroll */
-.header.header-scrolled  {
+.header.footer-scrolled  {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: transparent;
@@ -44,8 +44,8 @@
     width: 100%;
   }
 
-  .header-scrolled .menu li a,
-  .header-scrolled .menu li span {
+  .footer-scrolled .menu li a,
+  .footer-scrolled .menu li span {
     font: 600 1rem 'Inter', sans-serif;
   }
 
@@ -80,7 +80,7 @@
   #hamburguer {
     width: 30px;
     height: 2px;
-    background: var(--textwhite);
+    background: var(--branco);
     border-radius: 1px;
     position: relative;
     transition: background 0.3s ease; 

@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: linear-gradient(
     to right,
-    var(--verde-claro) 30%,  /* verde claro ocupa 60% */
+    var(--verde-claro) 0%,  /* verde claro ocupa 60% */
     var(--verde-escuro) 100%
   );
     padding: 100px 40px 0px;
@@ -34,8 +34,6 @@
   transform: rotate(180deg);
 }
 
-
-
 .intro_texto {
   flex: 1;
   display: flex;
@@ -49,8 +47,15 @@
 .intro_texto h1 {
   font-size: 3rem;
   font-weight: 300;
+  line-height: 1;
   margin-bottom: 20px;
   z-index: 1;
+}
+
+.intro_texto h1 strong {
+  font-weight: 600;
+  z-index: 1;
+  text-shadow: 4px 4px 12px rgba(0,0,0,0.4);
 }
 
 .retangulo-decorativo {
@@ -64,17 +69,10 @@
   overflow: hidden;
 }
 
-
-.intro_texto h1 strong {
-  font-weight: 600;
-  z-index: 1;
-  text-shadow: 4px 4px 12px rgba(0,0,0,0.4);
-}
-
 .intro_texto p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
   max-width: 500px;
   z-index: 1;
 }
@@ -85,50 +83,65 @@
 }
 
 .cta-button a {
-  background: var(--branco);
-  color: var(--verde-claro);
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;              /* só estilo */
+  align-items: center;
+  justify-content: center;
+
   padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
   border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 280px; 
-  max-width: 350px;
-  white-space: nowrap;  
-  z-index: 1;
+
+
+  /* 1) gradiente para o TEXTO  2) fundo branco para o BOTÃO */
+  background-image:
+    linear-gradient(to right, var(--verde-claro), var(--verde-escuro)),
+    linear-gradient(white, white);
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+
+  /* deixa só o texto visível da 1ª camada */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
-  
+
+/* Se tiver ícone dentro do <a>, reforce a cor do ícone (senão ele também fica “transparente”) */
+.cta-button a i {
+  color: var(--verde-escuro);
+  margin-left: .5rem;
+}
+
 .cta-button a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-
 .intro_imagem img {
   position: absolute;
   bottom: 0;
+  right: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 60%;
+  max-width: 100%;
   z-index: 3;
 }
 
 .intro_selo img {
   position: absolute;
-  bottom: 0;
+  top: 50%; /* Posiciona o topo do elemento no centro vertical */
   right: 10%;
-  max-width: 30%;
+  transform: translateY(-50%); /* Move o elemento para cima pela metade de sua própria altura */
+  max-width: 100%;
   z-index: 1;
 }
 
 
 /* Responsividade */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   
   .intro {
     padding: 0;
@@ -154,13 +167,31 @@
     font-size: 1.2rem;
     margin: 0 auto 30px;
   }
+
+  .cta-button {
+    display: flex;  
+    justify-content: center;
+  }
+
+  .cta-button a {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
   
   .intro_imagem {
     justify-content: center;
   }
 
   .intro_imagem img {
-    right: -50px;
-    max-width: 100%;
+    right: -15%;
+    left: auto;
+    transform: translateX(0);
+  }
+
+  .intro_selo img {
+    top: 85%; /* Posiciona mais para baixo */
+    right: 30%; /* Ajuste opcional para o posicionamento horizontal */
+    transform: translateY(-50%); /* Mantém o alinhamento vertical */
+    max-width: 75%;
   }
 }
