@@ -11,6 +11,7 @@ import "../../css/pre-requisitos.css";
 import "../../css/beneficios.css";
 import "../../css/banner-inscricao.css";
 import "../../css/faq.css";
+import "../../css/footer-float.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/cores.css";
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. DEPOIS INICIALIZE O HEADER SCROLL (código existente)
     const headerEl = document.querySelector('.header');
     if (headerEl) {
-        const headerScroll = new HeaderScroll('.header');
+        const headerScroll = new HeaderScroll('.footer-float');
         headerScroll.init();
     }
 
