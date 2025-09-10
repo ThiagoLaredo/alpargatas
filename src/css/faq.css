@@ -88,6 +88,11 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+    .faq {
+        padding-bottom: 2rem;
+    }
+
     .faq-title {
         font-size: 1.8rem;
     }

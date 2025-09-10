@@ -248,7 +248,7 @@
       <!-- Programa de Industrial -->
       <section id="programa-industrial" class="programa-content active">  
         
-        <section class="intro-programa">
+        <section class="intro-programa container">
 
           <div class="card-programa trainee-industrial">
             <div class="card-programa-header">
@@ -316,7 +316,7 @@
             <img src="./imgs/prop-card-selector-industrial.webp" alt="" />
           </div>
 
-          <div class="intro-programa-lista container">
+          <div class="intro-programa-lista">
             <div class="intro-programa-item">
               <h3>Projetos</h3>
               <p>Passando por diversas ferramentas para a condução dos projetos, o objetivo é trabalhar seu desenvolvimento na visão de soluções que visem a contínua expansão da Alpa no Brasil e no mundo.</p>
@@ -344,9 +344,9 @@
           </div>
         </section>
 
-        <section class="fases-programa container-small">
-          <h2>O Programa de Trainee Industrial
-            é composto </br> por 4 fases, conheça cada uma delas:</h2>
+        <section class="fases-programa container">
+          <h2>O Programa de <strong>Trainee Industrial</strong>
+            é composto </br> por <strong>4 fases</strong>, conheça cada uma delas:</h2>
           <div class="fases-programa-lista">
             <div class="fases-programa-item">
               <img src="./imgs/icones/onboarding.png" alt="Ícone de Onboarding" />
@@ -610,13 +610,15 @@
       </section>
 
       <section class="banner-inscricao">
-        <img src="./imgs/banner-inscricao.webp" alt="Imagem de candidatos a trainnes" />
-        <img src="./imgs/icones/logo-trainee-industrial-card.svg" alt="Ícone de trainee industrial">
-        <a href="https://alpargatas.ciadetalentos.com.br/" target="_blank" class="btn-cta-inscricao">Quero me inscrever no Trainne Industrial</a>
+        <div class="container">
+          <img src="./imgs/banner-inscricao.webp" alt="Imagem de candidatos a trainnes" />
+          <img src="./imgs/icones/logo-trainee-industrial-card.svg" alt="Ícone de trainee industrial">
+          <a href="https://alpargatas.ciadetalentos.com.br/" target="_blank" class="btn-cta-inscricao">Quero me inscrever no Trainne Industrial</a>
+        </div>
       </section>
 
       <section class="experiencias">
-        <h2> Confira algumas experiências que<br>
+        <h2> Confira algumas experiências que
           os nossos Trainees 2025 tiveram</h2>
       </section>
 
@@ -835,11 +837,8 @@
             <img src="./imgs/logo.svg" alt="Logo Alpargatas" />
             <span class="visually-hidden">Voltar para a página inicial</span>
           </a>
-          <nav class="menu">
-            <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
-              <span id="hamburguer"></span>
-            </button>  
-            <ul data-menu="list" id="menu">
+          <nav class="menu-footer"> 
+            <ul>
               <li><a href="#programa">O Programa</a></li>
               <li><a href="#programa-industrial">Trainne industrial</a></li>
               <li><a href="#sobre">Sobre a Alpa</a></li>

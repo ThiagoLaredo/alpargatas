@@ -17,6 +17,35 @@
   padding-bottom: 2rem;
 }
 
+.menu-footer ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu-footer li a {
+  font: 400;
+  color: var(--branco);
+  display: flex;
+  font-size: 1rem;
+  text-transform: uppercase;  
+  gap: 4px;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding: 0.5rem 1rem; 
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Sublinhado animado */  
+.menu-footer li a:hover {
+  opacity: .8;
+  transform: translateY(-2px);
+}
+
 .footer-social-links {
   display: flex;
   gap: 1rem;
@@ -60,5 +89,24 @@
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 768px) {
 
+  .footer_header {
+    flex-direction: column;
+    text-align: left;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .menu-footer li a {
+    padding: 0.5rem 0; 
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+  }
+}
 
