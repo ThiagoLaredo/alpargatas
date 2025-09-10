@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerScroll = new FooterScroll('.footer-float');
     footerScroll.init();
     
-
     const thumbnailEl = document.querySelector('#videoThumbnail');
     if (thumbnailEl) {
       const videoPopup = new VideoPopup(

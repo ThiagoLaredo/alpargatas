@@ -3,7 +3,7 @@
     background-color: var(--cinza100);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     align-items: center;
 }
 
@@ -11,7 +11,6 @@
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     min-width: 1000px;
@@ -54,25 +53,26 @@
 .botao-minimizar svg,
 .botao-expandir svg,
 .botao-fechar svg {
-    display: block;
+    display: none;
 }
 
 .card-programa > img:first-of-type {
   position: absolute;
-  top: 15px;
+  top: 25px;
   left: 0;
   display: block;
   width: 200px;
   height: auto;
+  z-index: 1;
 }
 
 .card-programa-texto {
-    padding: 120px 40px 20px 40px;
+    padding: 140px 40px 20px 40px;
     max-width: 600px;
 }
 
 .card-programa-texto p {
-    color: #666;
+    color: #4F4F4F;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.6;
@@ -111,13 +111,14 @@
     background-clip: padding-box, border-box;
     background-origin: border-box;
     position: relative; /* cria o contexto para o absolute */
+    overflow: hidden;
   }
   
   .card-programa.trainee-industrial img:last-of-type {
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 400px; /* opcional: controla o tamanho */
+    max-width: 350px; /* opcional: controla o tamanho */
     height: auto; /* mantém a proporção da imagem */
   }
   
@@ -155,24 +156,13 @@
   overflow: hidden;
 }
 
-/* Elemento de decoração SVG */
-.decoracao-svg {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  opacity: 0.7;
-  pointer-events: none; /* Permite interação com elementos abaixo */
-}
-
 .intro-programa-item::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -25px;
+  left: -20px;
   width: 85px;
-  height: 300px;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     var(--verde-claro) 0%,
@@ -184,16 +174,28 @@
   z-index: 1;
 }
 
+/* Elemento de decoração SVG */
+.decoracao-svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.7;
+  pointer-events: none; /* Permite interação com elementos abaixo */
+}
+
 .intro-programa-item h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 500;
   color: var(--branco);
   background: linear-gradient(
     to right,
     var(--verde-claro),
     var(--verde-escuro)
   );
-  padding: 15px 30px;
+  padding: 15px 60px;
   display: inline-block;
   width: fit-content;
   border-radius: 8px;
@@ -202,7 +204,7 @@
 }
 
 .intro-programa-item p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--branco);
   line-height: 2;
   max-width: 80%;
@@ -212,15 +214,40 @@
 
 @media (max-width: 768px) {
 
+  .intro-programa {
+    padding: 4rem 1rem;
+  }
+
+  .card-programa.trainee-industrial {
+    min-width: auto;
+    width: 100%;
+  }
+
   .intro-programa-lista {
     flex-direction: column;
     align-items: center;
   }
 
   .intro-programa-item {
-    padding: 20px 40px;
+    padding: 20px;
     min-height: auto;
     width: 100%;
+  }
+
+  .intro-programa-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    left: auto;
+    width: 55px;  
+    transform: skew(-10deg);
+    transform-origin: bottom right;
+    z-index: 1;
+  }
+
+  .decoracao-svg {
+    display: none;
   }
 
   .intro-programa-item h3 {
@@ -239,18 +266,22 @@
   }
 
   .card-programa-texto {
-    padding: 80px 20px 20px 20px;
+    padding: 40px 20px;
     max-width: 100%;
   }
 
   .card-programa > img:first-of-type {
-    position: static;
-    width: 150px;
+    width: 130px;
     margin: 0 auto 20px;
     display: block;
+    top: 0px;
   }
 
   .card-programa > img:last-of-type {
     height: auto;
+  }
+
+  .card-programa.trainee-industrial img:last-of-type {
+   display: none;
   }
 }

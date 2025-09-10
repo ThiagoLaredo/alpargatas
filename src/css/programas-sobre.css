@@ -21,9 +21,10 @@
   }
   
   .programas-sobre_texto h2 {
-    color: var(--azul-meio);
+    color: var(--azul-escuro);
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 300;
   }
   
   .programas-sobre_texto h3 {
@@ -48,8 +49,13 @@
   
   
   .programas-sobre_texto p {
-    color: var(--cinza500);
+    color: #737373;
     line-height: 2;
+    font-weight: 400;
+  }
+
+  .programas-sobre_texto p strong {
+    font-weight: 700;
   }
   
   /* Versão responsiva para mobile */
