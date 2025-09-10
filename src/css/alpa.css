@@ -24,7 +24,7 @@
   background-size: contain;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgb(243 243 243);
+  background-color: #f3f3f3;
   padding: 80px 80px 140px 80px;
   border-radius: 16px;
   position: relative;
@@ -58,10 +58,8 @@
   width: 0;
   height: 0;
   border-left: 40px solid transparent;  /* largura */
-  border-bottom: 40px solid var(--verde-claro); /* altura + cor */
+  border-bottom: 40px solid var(--verde-escuro); /* altura + cor */
 }
-
-
 
 .alpa_intro h2 {
   font-size: 2rem;
@@ -73,8 +71,9 @@
 
 .alpa_intro p {
   font-size: 1rem;
+  font-weight: 400;
   line-height: 2rem;
-  color: rgb(107 114 128);
+  color: #3f3f46;
   max-width: 40ch;
 }
 
@@ -121,15 +120,10 @@
  padding: 40px 0;
  display: flex;
  align-items: center;
- gap: 40px;
+ gap: 20px;
+ position: relative; /* necessário para o ::before ficar dentro do container */
+ z-index: 1;         /* garante que o conteúdo fique acima da imagem */
 }
-
-.alpa_conteudo {
-  position: relative; /* necessário para o ::before ficar dentro do container */
-  padding: 2rem;      /* ajuste conforme necessário */
-  z-index: 1;         /* garante que o conteúdo fique acima da imagem */
-}
-
 
 .alpa_lista {
   flex: 3;
@@ -145,8 +139,9 @@
   align-items: center;
   gap: 40px;
   margin-bottom: 20px;
-  color: var(--cinza700);
-  padding: 40px;
+  color: #78716C;
+  font-weight: 400;
+  padding: 20px 40px;
   background-color: var(--branco);  
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -166,6 +161,7 @@
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
+  color: #78716C;
 }
 
 .alpa_texto {
@@ -182,7 +178,7 @@
 }
 
 .alpa_texto a {
-  color: var(--verde);
+  color: var(--verde-escuro);
   text-decoration: underline;
 }
 
@@ -303,14 +299,14 @@
   }
 
   .alpa_container {
-    padding: 40px 20px 100px 20px;
+    padding: 60px 20px;
     background-size: cover;
   }
 
   .alpa_intro {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 40px;
   }
 
@@ -331,15 +327,15 @@
   }
 
   .alpa_imagem img {
-    position: static;
-    transform: none;
-    max-width: 60%;
-    margin-top: 20px;
+   display: none;
   }
 
   .alpa_btn {
-    position: static;
-    margin-top: 20px;
+    display: none;
+  }
+
+  .alpa_intro::before {
+    bottom: -40px;
   }
 
   .alpa_conteudo {
@@ -372,17 +368,17 @@
   }
 
   .alpa_texto {
-    margin-top: 40px;
-    margin-left: 0;
+    margin: 0;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 100%;
+    max-width: 30ch;
+    text-align: left;
   }
 
-  .imagem-computador {
+   .imagem-computador {
     display: none; /* esconde a imagem em telas pequenas */
-  }
-
+  } 
+  
   .alpa_quem {
     flex-direction: column;
     align-items: center;
@@ -390,5 +386,28 @@
     gap: 20px;
     padding: 20px 0;
   } 
+
+  .alpa_quem::before {
+    bottom: auto;
+    top: -5%;
+    right: -20px;
+    width: 200px;
+    height: 200px;
+    filter: blur(10px);
+  }
+
+  .alpa_quem_col1 {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .alpa_quem_col1 img {
+    right: -100px;
+  }
+
+  .alpa_quem_col2 {
+    background: #F4F4F5;
+    text-align: left;
+  }
 }
 
