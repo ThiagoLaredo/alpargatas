@@ -158,9 +158,7 @@ p, li, a, span, button {
   }
 
   @media (max-width: 768px) {
-    .container, .container-small, .container-medium {
-      padding: 0 1rem; /* Reduz o padding em telas menores */
-    }
+
     .container-medium {
       max-width: 1200px; /* Largura máxima do container */
     }

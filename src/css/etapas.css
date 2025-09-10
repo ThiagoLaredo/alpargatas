@@ -6,12 +6,13 @@
     text-align: center;
     color: var(--verde-escuro);
     margin-bottom: 10px;
-    font-size: 2.5em;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .etapas-processo p {
     text-align: center;
-    color: var(--cinza700);
+    color: #737373;
 }
 
 .etapas-processo-lista {
@@ -33,88 +34,96 @@
     align-items: center;
 }
 
-
 .etapas-processo-item .icon-wrapper {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    position: relative;
-  }
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
 
-  .etapas-processo-item .icon-wrapper:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.etapas-processo-item .icon-wrapper:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
   
-  .etapas-processo-item .icon-wrapper img {
-    max-width: 60%;  /* controla o tamanho do ícone dentro do círculo */
-    max-height: 60%;
-  }
+.etapas-processo-item .icon-wrapper img {
+  max-width: 60%;  /* controla o tamanho do ícone dentro do círculo */
+  max-height: 60%;
+}
 
-  .etapas-processo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
+.etapas-processo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
   
-  .etapas-processo-item .icon-wrapper {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    position: relative;
-  }
+.etapas-processo-item .icon-wrapper {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
   
-  /* linha de ligação */
-  .etapas-processo-item .icon-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%; /* começa na borda direita do círculo */
-    transform: translateY(-50%);
-    width: 150px; /* comprimento do traço */
-    height: 4px; /* espessura do traço */
-    background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
-  }
-    /* remove o traço do último item */ 
-    .etapas-processo-item:last-child .icon-wrapper::after {
-        display: none;
-    }
-  
-  
+/* linha de ligação */
+.etapas-processo-item .icon-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* começa na borda direita do círculo */
+  transform: translateY(-50%);
+  width: 150px; /* comprimento do traço */
+  height: 4px; /* espessura do traço */
+  background: linear-gradient(to right, var(--azul-escuro), var(--azul-meio), var(--azul-claro));
+}
+
+/* remove o traço do último item */ 
+.etapas-processo-item:last-child .icon-wrapper::after {
+    display: none;
+}
 
 .etapas-processo-item h3 {
     background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    font-weight: 500;
 }
 
 .etapas-processo-item p {
-    color: var(--cinza600);
+    color: #737373;
     font-size: 1em;
     line-height: 1.5;
 }
+
 @media (max-width: 768px) {
-    .etapas-processo-lista {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .etapas-processo-item {
-        width: 80%;
-    }
+  .etapas-processo {
+    padding: 2rem 0;
+    background: #F3F3F3;
+  }
+
+  .etapas-processo-lista {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .etapas-processo-item {
+      width: 80%;
+  }
+
+  .etapas-processo-item .icon-wrapper::after {
+    display: none;
+  }
 }
-
-

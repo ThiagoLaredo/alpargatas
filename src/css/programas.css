@@ -1,6 +1,6 @@
 .intro-programa {
     padding: 4rem 0;
-    background-color: var(--cinza100);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -215,7 +215,8 @@
 @media (max-width: 768px) {
 
   .intro-programa {
-    padding: 4rem 1rem;
+    background-color: #F3F3F3;
+    padding: 4rem 1.25rem;
   }
 
   .card-programa.trainee-industrial {
@@ -230,6 +231,7 @@
 
   .intro-programa-item {
     padding: 20px;
+    padding-right: 30px;
     min-height: auto;
     width: 100%;
   }
@@ -238,7 +240,7 @@
     content: "";
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -15px;
     left: auto;
     width: 55px;  
     transform: skew(-10deg);
@@ -266,7 +268,7 @@
   }
 
   .card-programa-texto {
-    padding: 40px 20px;
+    padding: 60px 20px 40px 20px;
     max-width: 100%;
   }
 

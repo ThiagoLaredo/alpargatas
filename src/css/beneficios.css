@@ -82,6 +82,11 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+    .beneficios {
+        padding: 4rem 1.25rem;
+    }
+
     .beneficios-lista {
         grid-template-columns: 1fr; /* Uma coluna em telas menores */
     }

@@ -12,7 +12,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
 }
 
 /* .pre-requisitos-card:hover {
@@ -64,6 +63,11 @@
 
 
   @media (max-width: 768px) {   
+
+    .pre-requisitos {
+    background: #F3F3F3;
+       }
+
     .pre-requisitos-card {
         flex-direction: column;
         text-align: center;
@@ -71,7 +75,7 @@
 
     .pre-requisitos-card img {
         margin: 0;
-        width: 50%;
+        width: 100%;
     }
 
     .pre-requisitos-conteudo {
