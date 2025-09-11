@@ -217,6 +217,7 @@
   .intro-programa {
     background-color: #F3F3F3;
     padding: 4rem 1.25rem;
+    gap: 2rem;
   }
 
   .card-programa.trainee-industrial {

@@ -6,6 +6,7 @@ export default class MenuMobile {
     this.logoMobile = document.querySelector(logoMobile);
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
+    this.headerActions = document.querySelector('.header_acoes');
     this.activeClass = "active";
     this.events = events || ["click"];
     this.menuOpened = false;
@@ -25,6 +26,7 @@ export default class MenuMobile {
       } else {
         this.menuOpened = true;
         this.menuList.classList.add(this.activeClass);
+        this.headerActions.classList.add(this.activeClass);
         this.menuButton.classList.add(this.activeClass);
         this.animateMenuItems();
         this.toggleMenuAnimation(true);
@@ -37,6 +39,7 @@ export default class MenuMobile {
     if (this.isMobile()) {
       this.menuOpened = false;
       this.menuList.classList.remove(this.activeClass);
+      this.headerActions.classList.remove(this.activeClass);
       this.menuButton.classList.remove(this.activeClass);
       this.toggleMenuAnimation(false);
       document.body.classList.remove('no-scroll');
@@ -104,7 +107,7 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.logoMobile && this.menuButton && this.menuList) {
+    if (this.logoMobile && this.menuButton && this.menuList && this.headerActions) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents();
     }

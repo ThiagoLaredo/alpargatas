@@ -192,6 +192,7 @@
 }
 
 .alpa_quem {
+  padding: 40px 0;
   display: flex;
   align-items: flex-end;
   gap: 20px;
@@ -233,6 +234,7 @@
   background-color: rgb(244 244 245);
   border-radius: 10px;
   position: relative;
+  width: 100%;
 }
 
 .alpa_quem_col1_texto {
@@ -272,6 +274,7 @@
   padding: 3.5rem 2rem;
   background-color: var(--branco);
   border-radius: 10px;
+  width: 100%;
 }
 
 
@@ -295,7 +298,7 @@
 
 @media (max-width: 768px) {
   .alpa {
-    padding: 40px 20px;
+    padding: 4rem 1.25rem;
   }
 
   .alpa_container {
@@ -339,9 +342,11 @@
   }
 
   .alpa_conteudo {
+    padding: 20px 0;
+    padding-bottom: 0;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 20px;
   }
 
@@ -371,8 +376,8 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 30ch;
     text-align: left;
+    max-width: 30ch;
   }
 
    .imagem-computador {
@@ -380,11 +385,11 @@
   } 
   
   .alpa_quem {
+    padding: 0 1.25rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
-    padding: 20px 0;
   } 
 
   .alpa_quem::before {
@@ -402,7 +407,8 @@
   }
 
   .alpa_quem_col1 img {
-    right: -100px;
+    right: -180px;
+    opacity: 0.3;
   }
 
   .alpa_quem_col2 {

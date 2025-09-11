@@ -65,8 +65,9 @@
   @media (max-width: 768px) {   
 
     .pre-requisitos {
-    background: #F3F3F3;
-       }
+        background: #F3F3F3;
+        padding-bottom: 4rem;
+    }
 
     .pre-requisitos-card {
         flex-direction: column;

@@ -98,6 +98,10 @@
     align-items: flex-start;
   }
 
+  .menu-footer ul {
+   flex-direction: column;
+  }
+
   .menu-footer li a {
     padding: 0.5rem 0; 
   }
