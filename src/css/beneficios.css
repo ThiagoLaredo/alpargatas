@@ -14,16 +14,11 @@
     color: var(--cinza700);
 }
 
-.beneficios-lista {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem; 
-  }
-
   .beneficios-lista {
     display: flex;
     flex-wrap: wrap;             /* permite quebrar em várias linhas */
     justify-content: center;     /* centraliza os itens */
+    align-items: stretch;        /* 🔑 faz todos os filhos terem a mesma altura */
     gap: 2rem;                   /* espaçamento entre os itens */
   }
   
@@ -40,6 +35,7 @@
     background-clip: padding-box, border-box;
     background-origin: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 156px;
   }
   
   
@@ -93,6 +89,7 @@
 
     .beneficios-item {
         flex: 0 1 100%; /* Ocupa toda a largura disponível */
+        min-height: 122px;
     }
 
     .beneficios-item h3 {
