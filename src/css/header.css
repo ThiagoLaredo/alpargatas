@@ -70,6 +70,10 @@ ul[data-menu="list"] {
   gap: 1rem;
 }
 
+.btn-cta-header {
+  display: none;
+}
+
 
 /* iPad Portrait (768px-1024px) Header Adjustments */
 @media only screen 
@@ -114,4 +118,5 @@ ul[data-menu="list"] {
     order: 2; /* Buttons after logo */
     margin-left: auto; /* Push buttons to right */
   }
+
 }

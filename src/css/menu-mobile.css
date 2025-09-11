@@ -1,4 +1,4 @@
-/* Elementos ocultos por padrão */
+
 [data-menu="button"] {
   display: none;
 }
@@ -62,12 +62,8 @@
   /* Botão hamburguer */
   .js [data-menu="button"] {
     display: flex;
-    background: radial-gradient(circle, var(--azul-claro) 0%, var(--azul-medio), var(--azul-escuro));
     border: none;
     padding: 0.6rem; 
-    border-radius: 50%; 
-    font-family: 'OpenSans', sans-serif;
-    font-weight: bold;
     color: #fff;
     cursor: pointer;
     margin: 4px 0;
@@ -85,7 +81,7 @@
     background: var(--branco);
     border-radius: 1px;
     position: relative;
-    transition: background 0.3s ease; 
+    transition: transform 0.3s ease; 
   }
 
   #hamburguer::before,
@@ -134,8 +130,7 @@
     left: 0;
     text-align: center;
     z-index: 200;
-    background-color: var(--verde-escuro);
-    padding: 80px 20px 20px;
+    background: linear-gradient(to right, var(--verde-claro) 0%, var(--verde-escuro) 100%);    padding: 80px 20px 20px;
     overflow-y: auto;
     box-sizing: border-box;
   }
@@ -143,8 +138,9 @@
   .js [data-menu="list"].active {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     gap: 1rem;
   }
 
@@ -157,7 +153,7 @@
     font-size: 1.2rem;
     line-height: 1.4;
     color: var(--branco);
-    padding: 0.8rem 1rem;
+    padding: 1rem 0;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -173,13 +169,10 @@
   .header_acoes {
     display: none;
     position: fixed;
-    bottom: 6rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 300px;
+    bottom: 30%;
+    left: 5%;
+    width: auto;
     flex-direction: column;
-    align-items: center;
     gap: 0.8rem;
     z-index: 201;
     padding: 0;
@@ -189,8 +182,8 @@
   .header_acoes.active {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    animation: fadeIn 0.3s ease forwards;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   @keyframes fadeIn {
@@ -198,62 +191,56 @@
     to { opacity: 1; transform: translate(-50%, 0); }
   }
 
-  .btn-login {
-    border: 2px solid var(--textwhite);
-    color: var(--textwhite);
+    /* estilo padrão dos links dentro */
+  .header_acoes.active a {
+    box-sizing: border-box;
+    text-align: center;            
   }
 
-  .btn-cadastro {
-    background-color: var(--secondary);
-    border: 2px solid var(--secondary);
-    color: var(--bg-branco);
+  /* último link ocupa 100% */
+  .header_acoes.active a:last-child {
+    flex: 1 1 100%;
   }
 
-  [data-menu="contato-mobile"].active  {
-    position: fixed;
-    font: 500 1rem 'Inter', sans-serif;
-    color: var(--textwhite);
-    display: block;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
-
-  [data-menu="linkedin"].active {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
-    display: block;
-    bottom: 0;
-    right: 0;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
-
-  [data-menu="whatsapp"].active {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
-    display: block;
-    bottom: 0;
-    right: 80px;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
-
-  [data-menu="instagram"].active {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
-    display: block;
-    bottom: 0;
-    right: 40px;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
+  .btn-cta-header {
+    display: inline-flex;         
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  
+    /* 1) gradiente para o TEXTO  2) fundo branco para o BOTÃO */
+    background-image:
+      linear-gradient(to right, var(--verde-claro), var(--verde-escuro)),
+      linear-gradient(white, white);
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+  
+    /* deixa só o texto visível da 1ª camada */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    z-index: 3;
+    text-align: center;
+    max-width: 90%;
 }
+  
+  /* Se tiver ícone dentro do <a>, reforce a cor do ícone (senão ele também fica “transparente”) */
+.btn-cta-inscricao i {
+    color: var(--verde-escuro);
+    margin-left: .5rem;
+}
+  
+.btn-cta-inscricao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+} 
+
