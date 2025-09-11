@@ -23,14 +23,6 @@
   transition: width 0.3s ease-in-out;
 }
 
-/* header scroll */
-.header.footer-scrolled  {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-} 
-
 .header_menu {
   box-sizing: border-box;
   height: 100%;

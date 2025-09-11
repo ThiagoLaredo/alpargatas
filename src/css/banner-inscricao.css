@@ -108,9 +108,8 @@
     }
 
     .banner-inscricao img:nth-of-type(2) {
-        max-width: 160px;
-        transform: translate(20%, 20%);
-        left: 34%;
+        max-width: 170px;
+        transform: translate(7%, 20%);
     }
 
     .btn-cta-inscricao {

@@ -5,8 +5,8 @@
 /* Container principal */
 .faq-container {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 4rem 1.25rem;
 }
 
 /* Título da seção */
@@ -90,7 +90,7 @@
 @media (max-width: 768px) {
 
     .faq {
-        padding-bottom: 2rem;
+        padding-bottom: 0;
     }
 
     .faq-title {
