@@ -58,7 +58,6 @@
     display: flex;
     align-items: flex-start; /* alinha o ícone no topo do texto */
     gap: 8px; /* espaço entre o ícone e o texto */
-    margin-bottom: 
   }
   
   .lista-pre-requisitos li svg {
