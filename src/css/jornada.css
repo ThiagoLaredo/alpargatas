@@ -7,9 +7,10 @@
 
 .jornada-bg {
  position: absolute;
- bottom: -10px;
+ bottom: 0;
+ left: 0;
  width: 100%;
- height: 100%;
+ height: auto;
  z-index: -1;
  /* object-fit: cover; */
 }
@@ -73,7 +74,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    color: var(--cinza500);
+    color: #737373;
     text-align: left;
 }
 
@@ -81,6 +82,7 @@
    text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 5px;
+    font-weight: 500;
 }
 
 .jornada-imagem {
@@ -105,6 +107,7 @@
 
     .jornada-lista {
         width: 100%;
+        gap: 40px;
     }
 
     .jornada-imagem {

@@ -133,7 +133,7 @@
 .intro_selo img {
   position: absolute;
   top: 50%; /* Posiciona o topo do elemento no centro vertical */
-  right: 10%;
+  right: 100px;
   transform: translateY(-50%); /* Move o elemento para cima pela metade de sua própria altura */
   max-width: 100%;
   z-index: 1;

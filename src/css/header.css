@@ -42,7 +42,8 @@ ul[data-menu="list"] {
 }
 
 .menu li a {
-  font: 400;
+  font-weight: 400;
+  font-size: 12px;
   color: var(--branco);
   display: flex;
   font-size: 1rem;

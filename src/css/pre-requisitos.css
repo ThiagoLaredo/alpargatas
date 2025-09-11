@@ -12,19 +12,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
-/* .pre-requisitos-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
 
 .pre-requisitos-card img {
     flex: 1;
+    border-radius: 16px;   
     width: 100%;
     height: auto;
-    margin-left: -111px;
+    margin-left: -50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .pre-requisitos-conteudo {
@@ -47,19 +45,28 @@
     text-align: left;
 }
   
-.pre-requisitos-card ul {
+.lista-pre-requisitos {
+    display: flex;
+    flex-direction: column; /* mantém os itens em coluna */
+    gap: 16px; /* ajuste o valor conforme o espaço desejado */
     list-style-type: none;
     text-align: left;
     color: var(--branco);
 }
 
-.pre-requisitos-card li {
-    display: flex;           
-    align-items: center;        
-    gap: 20px;   
-    list-style: none; 
-    margin-bottom: 20px; 
+.lista-pre-requisitos li {
+    display: flex;
+    align-items: flex-start; /* alinha o ícone no topo do texto */
+    gap: 8px; /* espaço entre o ícone e o texto */
+    margin-bottom: 
   }
+  
+  .lista-pre-requisitos li svg {
+    flex-shrink: 0;   /* impede o SVG de encolher */
+    width: 22px;      /* garante tamanho fixo */
+    height: 22px;     /* garante tamanho fixo */
+  }
+  
 
 
   @media (max-width: 768px) {   

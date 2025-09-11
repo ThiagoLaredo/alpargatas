@@ -3,6 +3,16 @@
   background-color: var(--branco);
   position: relative;
   overflow: hidden; /* garante que não "vaze" */
+}
+
+.alpa::before {
+  content: "";
+  position: absolute;
+  top: 25%; 
+  right: 5%;
+
+  width: 650px;   /* maior = mais espaço pro desfoque */
+  height: 650px;
 
   background: radial-gradient(
     circle at center,
@@ -12,23 +22,19 @@
     transparent 100%              /* desaparece bem no fim */
   );
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  filter: blur(80px); /* desfoca ainda mais as bordas */
+  z-index: 0;
 }
 
 .alpa_container {
-  background-image: url('../imgs/about-prog.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   background-color: #f3f3f3;
   padding: 80px 80px 140px 80px;
   border-radius: 16px;
   position: relative;
 }
+
 
 .alpa_intro {
   display: flex;
@@ -110,11 +116,15 @@
   line-height: 1.2;         /* controla espaçamento entre linhas */
 }
 
-.scroll-button i {
-  font-size: 2rem;        /* altura da seta */
-  display: flex;
-  align-self: center;       /* garante alinhamento vertical ao centro do texto */
+.scroll-button img {
+  display: inline-block;
+  transition: transform 0.3s ease; /* suavidade */
 }
+
+.scroll-button:hover img {
+  transform: translateY(4px); /* desce 4px no hover */
+}
+
 
 .alpa_conteudo {
  padding: 40px 0;
@@ -201,7 +211,6 @@
   background-color: var(--branco);
   border-radius: 10px;
   z-index: 0; /* garante que o card tenha "nível" acima do ::before */
-
 }
 
 .alpa_quem::before {
@@ -224,7 +233,6 @@
   filter: blur(80px); /* desfoca ainda mais as bordas */
   z-index: -1;
 }
-
 
 .alpa_quem_col1 {
   flex: 1;
@@ -277,7 +285,6 @@
   width: 100%;
 }
 
-
 .alpa_quem_col2 p {
   font-size: 1rem;
   line-height: 2.25rem;
@@ -286,7 +293,6 @@
   margin-top: 10px;
   max-width: 15rem;
 }
-
 
 .alpa_quem_col2 .texto_destaque {
   font-size: 1.25rem;
@@ -304,6 +310,7 @@
   .alpa_container {
     padding: 60px 20px;
     background-size: cover;
+    max-width: 1200px;
   }
 
   .alpa_intro {
