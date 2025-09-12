@@ -9,6 +9,13 @@
   padding: 1rem 2rem;
 }
 
+#descricao-areas .header {
+  position: relative; /* Muda para relative para ficar dentro da seção */
+  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  color: var(--branco);
+}
+
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -75,8 +82,6 @@ ul[data-menu="list"] {
   display: none;
 }
 
-
-/* iPad Portrait (768px-1024px) Header Adjustments */
 @media only screen 
   and (min-width: 768px) 
   and (max-width: 1024px) 
@@ -105,7 +110,7 @@ ul[data-menu="list"] {
   }
 
   ul[data-menu="list"] {
-    gap: 1rem; /* Reduced gap between menu items */
+    gap: .5rem; /* Reduced gap between menu items */
     flex-wrap: wrap; /* Allow menu items to wrap */
     justify-content: center;
   }

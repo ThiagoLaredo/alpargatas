@@ -139,7 +139,6 @@
   z-index: 1;
 }
 
-
 /* Responsividade */
 @media (max-width: 768px) {
   
@@ -193,5 +192,15 @@
     right: 30%; /* Ajuste opcional para o posicionamento horizontal */
     transform: translateY(-50%); /* Mantém o alinhamento vertical */
     max-width: 75%;
+  }
+}
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) {
+
+    .intro {
+      min-height: 70vh;
   }
 }
