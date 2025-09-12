@@ -1,0 +1,97 @@
+/* fundo da página */
+.descricao-areas {
+    background: #F3F3F3;
+    padding: 80px 0;
+  }
+
+/* container geral */
+.areas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.areas-titulo {
+  text-align: center;
+  font-size: 1.875rem;
+  color: var(--verde-escuro);
+  font-weight: 400;
+}
+
+.sp-fabricas, .sede {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sp-fabricas h2, .sede h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sp-fabricas h2 strong, .sede h2 strong {
+  font-weight: 500;
+}
+
+.sp-fabricas h2 {
+  background: linear-gradient(to right, var(--azul-claro),  var(--azul-meio), var(--azul-escuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sede h2 {
+  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* card */
+.card-area {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* header do card */
+
+.card-header {
+  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+  padding: 1rem 1.5rem;
+}
+
+.sp-fabricas .card-header {
+  background: linear-gradient(to right, var(--azul-claro),  var(--azul-meio), var(--azul-escuro));
+}
+
+.card-header h3,
+.card-header h4 {
+  margin: 0;
+  color: #fff;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-header h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  opacity: 0.9;
+}
+
+/* corpo do card */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body p {
+  margin-bottom: 1rem;
+  color:#77787b;
+}

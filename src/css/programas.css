@@ -59,7 +59,7 @@
     display: none;
 }
 
-.card-programa > img:first-of-type {
+.card-programa-icon img {
   position: absolute;
   top: 25px;
   left: 0;
@@ -81,48 +81,59 @@
     line-height: 1.6;
 }
 
-.card-programa-texto a {
-    display: inline-block;
-    margin: 15px 0 30px;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+.card-programa.trainee-industrial {
+  border: 1px solid transparent;
+  border-radius: 16px; /* ajuste conforme seu design */
+  background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(
+      to right,
+      var(--azul-escuro),
+      var(--azul-meio),
+      var(--azul-claro)
+    ) border-box;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  position: relative; /* cria o contexto para o absolute */
+  overflow: hidden;
 }
-
-.card-programa > img:last-of-type {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    display: block;
-}
-
-/* Cores específicas para cada card */
-
+  
   .card-programa.trainee-industrial {
-    border: 1px solid transparent;
-    border-radius: 16px; /* ajuste conforme seu design */
-    background: 
-      linear-gradient(white, white) padding-box,
-      linear-gradient(
-        to right,
-        var(--azul-escuro),
-        var(--azul-meio),
-        var(--azul-claro)
-      ) border-box;
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    position: relative; /* cria o contexto para o absolute */
-    overflow: hidden;
+    position: relative;
   }
   
-  .card-programa.trainee-industrial img:last-of-type {
+  .card-programa.trainee-industrial .card-programa-img {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: 350px; /* opcional: controla o tamanho */
-    height: auto; /* mantém a proporção da imagem */
+    bottom: 20px;
+    right: 20px;
+    max-width: 350px;
+    border-radius: 16px;
+  }
+  
+  .card-programa.trainee-industrial .card-programa-img::before {
+    content: "";
+    position: absolute;
+    top: 10px;    /* deslocamento para baixo */
+    left: -10px;  /* deslocamento para esquerda */
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(
+      to right,
+      var(--azul-escuro),
+      var(--azul-meio),
+      var(--azul-claro)
+    );
+    z-index: 0;
+  }
+  
+  .card-programa.trainee-industrial .card-programa-img img {
+    position: relative; /* mantém imagem acima do ::before */
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    z-index: 1;
   }
   
 
@@ -279,18 +290,14 @@
     max-width: 100%;
   }
 
-  .card-programa > img:first-of-type {
+  .card-programa-icon img {
     width: 130px;
     margin: 0 auto 20px;
     display: block;
     top: 0px;
   }
 
-  .card-programa > img:last-of-type {
-    height: auto;
-  }
-
-  .card-programa.trainee-industrial img:last-of-type {
+  .card-programa-img{
    display: none;
   }
 }

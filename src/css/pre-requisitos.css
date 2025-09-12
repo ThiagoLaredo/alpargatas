@@ -20,6 +20,7 @@
     flex: 1;
     border-radius: 16px;   
     width: 100%;
+    max-width: 500px;
     height: auto;
     margin-left: -50px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
