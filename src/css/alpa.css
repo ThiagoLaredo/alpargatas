@@ -268,8 +268,8 @@
 .alpa_quem_col1 img {
   position: absolute;
   bottom: 0;
-  right: -200px;
-  max-width: 440px;
+  right: -120px;
+  max-width: 300px;
   z-index: 1;
 }
 
