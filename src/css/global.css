@@ -115,7 +115,6 @@ img {
   height: 0;
 }
 
-/* Evita que os elementos apareçam antes do JavaScript animar */
 [data-menu='logo'],
 [data-menu='button'],
 #menu > li > a,

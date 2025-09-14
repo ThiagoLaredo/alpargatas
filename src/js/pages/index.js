@@ -6,6 +6,7 @@ import "../../css/programas-sobre.css";
 import "../../css/programas.css";
 import "../../css/fases.css";
 import  "../../css/jornada.css";
+import  "../../css/swiper.css";
 import "../../css/etapas.css";
 import "../../css/pre-requisitos.css";
 import "../../css/beneficios.css";
@@ -21,7 +22,9 @@ import FAQ from '../modules/faq.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FooterScroll from '../modules/footer-scroll.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import VideoPopup from '../modules/VideoPopup.js';
+import AreasSwiper from '../modules/AreasSwiper.js';
+import CardExpand from '../modules/CardExpand.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -48,7 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // HEADER SCROLL
     const headerScroll = new HeaderScroll('.header');
     headerScroll.init();
-    
+
+    // AREAS SWIPER
+    new AreasSwiper('.areas-swiper');
+
+    new CardExpand('.area-card'); 
+
+
     const thumbnailEl = document.querySelector('#videoThumbnail');
     if (thumbnailEl) {
       const videoPopup = new VideoPopup(
