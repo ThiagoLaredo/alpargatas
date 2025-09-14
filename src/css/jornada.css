@@ -132,6 +132,7 @@
     .jornada-lista {
         width: 100%;
         gap: 40px;
+        order: 2;
     }
 
     .jornada-imagem {

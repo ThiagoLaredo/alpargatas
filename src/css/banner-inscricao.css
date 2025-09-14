@@ -65,12 +65,7 @@
     z-index: 3;
     text-align: center;
 }
-  
-  /* Se tiver ícone dentro do <a>, reforce a cor do ícone (senão ele também fica “transparente”) */
-.btn-cta-inscricao i {
-    color: var(--azul-escuro);
-    margin-left: .5rem;
-}
+
   
 .btn-cta-inscricao:hover {
     transform: translateY(-2px);
@@ -97,6 +92,7 @@
 @media (max-width: 768px) {
 
     .banner-inscricao {
+        padding: 50px 0;
         /* padding: 2rem; */
         min-height: 400px;
     }
@@ -112,8 +108,9 @@
     }
 
     .btn-cta-inscricao {
-        font-size: 1rem;
-        padding: 0.75rem 1.5rem;
+        font-size: .8rem;
+        padding: 1rem 0.75rem;
+        width: 100%;
     }
 
     .experiencias {
