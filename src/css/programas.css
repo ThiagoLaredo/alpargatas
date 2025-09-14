@@ -229,7 +229,7 @@
 @media (max-width: 768px) {
 
   .intro-programa {
-    padding: 4rem 1.25rem;
+    padding: 4rem 0;
     gap: 2rem;
   }
 

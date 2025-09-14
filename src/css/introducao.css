@@ -133,7 +133,7 @@
 .intro_selo img {
   position: absolute;
   top: 50%; /* Posiciona o topo do elemento no centro vertical */
-  right: 100px;
+  right: 90px;
   transform: translateY(-50%); /* Move o elemento para cima pela metade de sua própria altura */
   max-width: 100%;
   z-index: 1;
@@ -201,6 +201,16 @@
   and (orientation: portrait) {
 
     .intro {
-      min-height: 70vh;
+      min-height: 50vh;
+  }
+
+  .intro_imagem img {
+    left: 70%;
+  }
+
+  .intro_selo img {
+    transform: translateX(-40%);
+    top: 20%;
+    max-width: 40%;
   }
 }
