@@ -78,6 +78,14 @@ ul[data-menu="list"] {
   gap: 1rem;
 }
 
+.header_acoes a:hover svg rect {
+  stroke: #fff !important;
+}
+
+.header_acoes a:hover svg path {
+  fill: #fff !important;
+}
+
 .btn-cta-header {
   display: none;
 }

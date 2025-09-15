@@ -5,7 +5,7 @@
 .pre-requisitos-card {
     background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
     border-radius: 16px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     display: flex;
@@ -22,7 +22,7 @@
     width: 100%;
     max-width: 500px;
     height: auto;
-    margin-left: -50px;
+    margin-left: -60px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,6 +79,7 @@
     .pre-requisitos-card {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
 
     .pre-requisitos-card img {
