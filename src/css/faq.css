@@ -71,7 +71,7 @@
 
 .faq-answer a {
     color: var(--verde-escuro);
-    font-weight: 400;;
+    font-weight: 400;
 }
 /* Estado ativo - ALTERAÇÃO CRÍTICA AQUI */
 .faq-item.active .faq-question {
