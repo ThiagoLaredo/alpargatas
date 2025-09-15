@@ -65,7 +65,7 @@ export const initPageOpenAnimations = () => {
 };
 
 export const initScrollButtonAnimation = () => {
-  const arrow = document.querySelector('.scroll-text img');
+  const arrow = document.querySelector('.scroll-button img');
 
   if (arrow) {
     gsap.to(arrow, {
@@ -78,6 +78,16 @@ export const initScrollButtonAnimation = () => {
   }
 };
 
+export const initMapAnimations = () => {
+  gsap.to(".map-anime", {
+    scale: 1.1,         // aumenta levemente
+    transformOrigin: "center center", // mantém o ponto fixo
+    repeat: -1,         // loop infinito
+    yoyo: true,         // vai e volta
+    ease: "power1.inOut",
+    duration: 1.2
+  });
+};
 
   export function initScrollAnimations() {
   

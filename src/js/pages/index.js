@@ -21,7 +21,7 @@ import MenuMobile from '../modules/menu-mobile.js';
 import FAQ from '../modules/faq.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FooterScroll from '../modules/footer-scroll.js';
-import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
+import { initPageOpenAnimations, initScrollButtonAnimation, initScrollAnimations, initMapAnimations } from '../modules/animations.js';
 import AreasSwiper from '../modules/AreasSwiper.js';
 import CardExpand from '../modules/CardExpand.js';
 
@@ -72,7 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animações de abertura e scroll
     initPageOpenAnimations();
+    initScrollButtonAnimation();
     initScrollAnimations();
+    initMapAnimations();
 
     // Inicializa a classe FAQ
     new FAQ('.faq-item');
