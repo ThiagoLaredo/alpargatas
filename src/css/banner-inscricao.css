@@ -92,14 +92,14 @@
 @media (max-width: 768px) {
 
     .banner-inscricao {
-        padding: 50px 0;
+        padding: 10px 0;
         /* padding: 2rem; */
-        min-height: 400px;
+        min-height: 260px;
     }
 
     .banner-inscricao img {
-        left: 40%;
-        height: 350px;
+        width: 100%;
+        height: auto;
     }
 
     .banner-inscricao img:nth-of-type(2) {

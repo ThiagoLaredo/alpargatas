@@ -13,7 +13,6 @@ import FAQ from '../modules/faq.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FooterScroll from '../modules/footer-scroll.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import VideoPopup from '../modules/VideoPopup.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -40,18 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // HEADER SCROLL
     const headerScroll = new HeaderScroll('.header');
     headerScroll.init();
-    
-    const thumbnailEl = document.querySelector('#videoThumbnail');
-    if (thumbnailEl) {
-      const videoPopup = new VideoPopup(
-        '#videoThumbnail',
-        '#videoPopup',
-        '#videoElement', 
-        '#closePopup',
-        '../videos/lancamento.mp4'
-      );
-      videoPopup.init();
-    }
 
     // Animações de abertura e scroll
     initPageOpenAnimations();

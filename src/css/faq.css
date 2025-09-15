@@ -90,7 +90,7 @@
 @media (max-width: 768px) {
 
     .faq {
-        padding-bottom: 0;
+        padding: 4rem 0;
     }
 
     .faq-title {

@@ -5,52 +5,52 @@
   }
 
 /* container geral */
-.areas {
+.descricao-areas .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: 60px;
 }
 
 .areas-titulo {
-  text-align: center;
-  font-size: 1.875rem;
-  color: var(--verde-escuro);
-  font-weight: 400;
-}
-
-.sp-fabricas, .sede {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
-.sp-fabricas h2, .sede h2 {
+.areas-titulo h1 {
+  font-size: 45px;
+  color: var(--verde-escuro);
+  font-weight: 700;
+}
+
+.areas-titulo h1.titulo-azul {
+  color: var(--azul-escuro);
+}
+
+.areas-titulo h2  {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 35px;
   margin-bottom: 10px;
+  color: #737373;
 }
 
-.sp-fabricas h2 strong, .sede h2 strong {
-  font-weight: 500;
+.areas-titulo p  {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #77787B;
 }
 
-.sp-fabricas h2 {
-  background: linear-gradient(to right, var(--azul-claro),  var(--azul-meio), var(--azul-escuro));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sede h2 {
-  background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#supply, #industrial {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* card */
 .card-area {
   background: #fff;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -59,13 +59,26 @@
 
 /* header do card */
 
-.card-header {
+#industrial .card-header {
+  background: var(--verde-escuro);
+  padding: 1rem 1.5rem;
+}
+
+#industrial .card-header.header-degrade {
   background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
   padding: 1rem 1.5rem;
 }
 
-.sp-fabricas .card-header {
+
+#supply .card-header.header-degrade {
   background: linear-gradient(to right, var(--azul-claro),  var(--azul-meio), var(--azul-escuro));
+  padding: 1rem 1.5rem;
+}
+
+#supply .card-header {
+  background: var(--azul-meio);
+  padding: 1rem 1.5rem;
+
 }
 
 .card-header h3,
@@ -75,7 +88,7 @@
 }
 
 .card-header h3 {
-  font-size: 1.25rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -94,4 +107,32 @@
 .card-body p {
   margin-bottom: 1rem;
   color:#77787b;
+}
+
+@media (max-width: 768px) {
+
+  .descricao-areas {
+    padding: 4rem 0;
+  }
+
+  .descricao-areas .container {
+    gap: 30px;
+  }
+
+  #supply, #industrial {
+    gap: 20px;
+  }
+
+  .areas-titulo h1 {
+    font-size: 26px;
+  }
+
+  .areas-titulo h2  {
+    font-size: 22px;
+  }
+
+  .card-header h3 {
+    font-size: 20px;
+  }
+
 }
