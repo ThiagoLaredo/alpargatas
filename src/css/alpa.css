@@ -116,16 +116,6 @@
   line-height: 1.2;         /* controla espaçamento entre linhas */
 }
 
-.scroll-button img {
-  display: inline-block;
-  transition: transform 0.3s ease; /* suavidade */
-}
-
-.scroll-button:hover img {
-  transform: translateY(4px); /* desce 4px no hover */
-}
-
-
 .alpa_conteudo {
  padding: 40px 0;
  display: flex;
