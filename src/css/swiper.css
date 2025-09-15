@@ -113,7 +113,7 @@
 }
 
 .swiper-button-prev {
-  left: 65px;
+  left: 65px !important;
 }
   
 /* botões de navegação */
@@ -147,7 +147,7 @@
   }
 
   .swiper-button-prev {
-    left: .3rem;
+    left: .3rem !important;
   }
 
   .areas-swiper .swiper-button-prev {
