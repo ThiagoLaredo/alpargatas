@@ -76,7 +76,7 @@
 
 .faq-item.active .faq-answer {
     max-height: 3000px; /* Aumentei significativamente para conteúdo longo */
-    padding: 20px; 
+    padding: 0; 
     background-color: #fff;
     /* border-radius: 16px; */
     margin: 0;
