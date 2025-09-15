@@ -78,34 +78,23 @@ export const initScrollButtonAnimation = () => {
   }
 };
 
-export const initMapAnimations = () => {
-  gsap.to(".map-anime", {
-    scale: 1.1,         // aumenta levemente
-    transformOrigin: "center center", // mantém o ponto fixo
-    repeat: -1,         // loop infinito
-    yoyo: true,         // vai e volta
-    ease: "power1.inOut",
-    duration: 1.2
-  });
-};
+export function initScrollAnimations() {
 
-  export function initScrollAnimations() {
-  
-    const elements = document.querySelectorAll(".animate-me");
-  
-    elements.forEach((el, index) => {
-  
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 100%",
-          toggleActions: "play none none none",
-          markers: false,
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out"
-      });
+  const elements = document.querySelectorAll(".animate-me");
+
+  elements.forEach((el, index) => {
+
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 100%",
+        toggleActions: "play none none none",
+        markers: false,
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out"
     });
-  }
+  });
+}
