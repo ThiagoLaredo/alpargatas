@@ -35,6 +35,16 @@
     background-clip: padding-box, border-box;
     background-origin: border-box;
     min-height: 180px;
+    gap: 20px;
+}
+
+.fases-programa-item:last-child {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.fases-programa-item:last-child h3, .fases-programa-item:last-child p {
+    text-align: left;
 }
 
 .fases-programa-item img {
@@ -71,5 +81,14 @@
     .fases-programa-item {
         width: 100%;
         min-height: auto;
+    }
+
+    .fases-programa-item:last-child {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .fases-programa-item:last-child h3, .fases-programa-item:last-child p {
+        text-align: center;
     }
 }
