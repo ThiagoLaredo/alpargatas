@@ -10,7 +10,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const PATHS = { src: path.join(__dirname, 'src') };
 
-const pages = ['index', 'descricao-areas'];
+const pages = ['index', 'descricao-areas-industrial', 'descricao-areas-supply' ];
 
 const entryPoints = pages.reduce((entries, page) => {
   const jsPath = `./src/js/pages/${page}.js`;
@@ -131,7 +131,6 @@ module.exports = (env, argv) => {
         patterns: [
           // Assets estáticos
           { from: 'src/imgs', to: 'imgs' },
-          { from: 'src/videos', to: 'videos' },
           
           // Font Awesome (ícones)
           {
