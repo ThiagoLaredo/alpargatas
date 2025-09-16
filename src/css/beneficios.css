@@ -14,49 +14,31 @@
     color: var(--cinza700);
 }
 
-  .beneficios-lista {
-    display: flex;
-    flex-wrap: wrap;             /* permite quebrar em várias linhas */
-    justify-content: center;     /* centraliza os itens */
-    align-items: stretch;        /* 🔑 faz todos os filhos terem a mesma altura */
-    gap: 2rem;                   /* espaçamento entre os itens */
-  }
-  
-  .beneficios-item {
-    flex: 0 1 calc(33.333% - 2rem); /* 3 colunas */
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--verde-claro), var(--verde-escuro)) border-box;
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 156px;
-  }
-  
-  
-/* 
+.beneficios-lista {
+display: flex;
+flex-wrap: wrap;             /* permite quebrar em várias linhas */
+justify-content: center;     /* centraliza os itens */
+align-items: stretch;        /* 🔑 faz todos os filhos terem a mesma altura */
+gap: 2rem;                   /* espaçamento entre os itens */
+}
+
 .beneficios-item {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    align-items: center;
-    gap: 40px;
-    border: 1px solid transparent;
-    border-radius: 16px;
-    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--verde-claro), var(--verde-escuro)) border-box;
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-} */
-
-
+flex: 0 1 calc(33.333% - 2rem); /* 3 colunas */
+padding: 20px;
+text-align: center;
+display: flex;
+align-items: center;
+gap: 40px;
+border: 1px solid transparent;
+border-radius: 8px;
+background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--verde-claro), var(--verde-escuro)) border-box;
+background-clip: padding-box, border-box;
+background-origin: border-box;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+min-height: 156px;
+/* min-width: fit-content; */
+}
+  
 .beneficios-item .icon-wrapper:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
@@ -72,7 +54,7 @@
     background: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: left;
 }
 
@@ -97,7 +79,16 @@
     }
 }
 
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) { 
 
+    .beneficios-item {
+        gap: 20px;
+    }
 
-
-
+    .beneficios-item h3 {   
+        font-size: 1.4rem;
+    }
+  }

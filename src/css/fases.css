@@ -92,3 +92,32 @@
         text-align: center;
     }
 }
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) { 
+
+    .fases-programa {
+        padding: 4rem 1.5rem;
+    }
+
+    .fases-programa-lista {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fases-programa-item {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .fases-programa-item:last-child {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .fases-programa-item:last-child h3, .fases-programa-item:last-child p {
+        text-align: center;
+    }
+  }
