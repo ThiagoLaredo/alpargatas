@@ -49,12 +49,31 @@ body {
     will-change: opacity;
     backface-visibility: hidden;
 }
-
-/* Reset inicial seguro */
-body.preload .page-open-animate,
+/* 
+body.preload .decoracao-bottom-left,
+body.preload .decoracao-top-right,
+body.preload .intro_texto h1,
+body.preload .intro_texto p,
+body.preload .intro_texto .retangulo-decorativo,
+body.preload .cta-button,
+body.preload .intro_imagem,
+body.preload .intro_selo,
 body.preload [data-menu],
-body.preload .header_acoes a {
-    opacity: 0 !important;
+body.preload .header_acoes a,
+body.preload .page-open-animate {
+  opacity: 0 !important;
+  visibility: hidden; 
+} */
+
+[data-menu='logo'],
+[data-menu='button'],
+#menu > li > a,
+#menu > li > span,
+.header_acoes a,
+.page-open-animate, .decoracao-bottom-left, .decoracao-top-right, .intro_texto h1, .intro_texto p,.intro_texto .retangulo-decorativo,.cta-button,
+ .intro_imagem,
+ .intro_selo {
+  opacity: 0;
 }
 
 .container {
@@ -115,15 +134,6 @@ img {
   height: 0;
 }
 
-[data-menu='logo'],
-[data-menu='button'],
-#menu > li > a,
-#menu > li > span,
-.header_acoes a,
-.page-open-animate {
-  opacity: 0;
-}
-
 :root {
   --fonte-principal: "Ubuntu", sans-serif;
 }
@@ -145,16 +155,6 @@ p, li, a, span, button {
   font-weight: 300;
   line-height: 1.6; /* melhora a legibilidade */
 }
-
-/* iPad Portrait (768px-1024px) Header Adjustments */
-@media only screen 
-  and (min-width: 768px) 
-  and (max-width: 1024px) 
-  and (orientation: portrait) {
-    .mascotes-img  {
-      opacity: 0.2;
-    }
-  }
 
   @media (max-width: 768px) {
 
