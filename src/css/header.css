@@ -51,6 +51,7 @@ ul[data-menu="list"] {
 .menu li a {
   font-weight: 400;
   font-size: 12px;
+  line-height: 1;
   color: var(--branco);
   display: flex;
   font-size: 1rem;
@@ -125,7 +126,7 @@ ul[data-menu="list"] {
 
   .menu li a {
     font-size: 0.9rem; /* Slightly smaller font */
-    padding: 0.5rem; /* Reduced padding */
+    padding: 0.4rem; /* Reduced padding */
   }
 
   .header_acoes {

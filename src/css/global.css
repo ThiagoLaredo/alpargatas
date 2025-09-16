@@ -30,10 +30,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Adicione no seu CSS global ou no menu-mobile.css */
 .no-scroll {
   overflow: hidden;
   height: 100vh;
+  position: fixed;   /* trava o body */
+  width: 100%;       /* evita deslocamento lateral */
 }
 
 /* Garante que o menu não cause rolagem horizontal */
