@@ -404,13 +404,24 @@
   }
 
   .alpa_quem_col1 img {
-    right: -80px;
-    opacity: 0.4;
+    right: -50px;
+    opacity: 0.3;
   }
 
   .alpa_quem_col2 {
     background: #F4F4F5;
     text-align: left;
+  }
+}
+
+@media only screen 
+and (min-width: 769px) 
+and (max-width: 1024px) 
+and (orientation: portrait) {
+
+  .alpa_quem_col1 img {
+    right: -100px;
+    max-width: 230px;
   }
 }
 

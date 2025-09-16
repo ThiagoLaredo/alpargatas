@@ -127,3 +127,22 @@
     display: none;
   }
 }
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) { 
+
+    .etapas-processo-lista {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .etapas-processo-item {
+      width: 80%;
+  }
+
+  .etapas-processo-item .icon-wrapper::after {
+    display: none;
+  }
+  }
