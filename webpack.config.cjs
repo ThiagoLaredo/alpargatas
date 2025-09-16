@@ -140,18 +140,10 @@ module.exports = (env, argv) => {
               // Copia apenas os arquivos de fonte necessários
               return /fa-(brands|solid|regular)-[0-9]+\.(woff2|woff|ttf)$/.test(path.basename(resourcePath));
             }
-          },
-          
-          // Fontes Inter (principal, semibold e bold)
-          {
-            from: path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
-            to: 'fonts',
-            filter: (resourcePath) => {
-              return /fa-(brands|solid|regular)-[0-9]+\.(woff2|woff|ttf)$/.test(path.basename(resourcePath));
-            }
           }
         ]
       })
+      
     ],
 
     resolve: {
