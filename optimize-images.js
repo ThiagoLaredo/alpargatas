@@ -1,10 +1,11 @@
-// optimize-images.js
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
-const inputDir = "./src/imgs";   // pasta onde estão suas imagens originais
-const outputDir = "./dist/imgs"; // pasta de saída (ou sobrescreve a mesma se preferir)
+// pasta original
+const inputDir = "./src/imgs";   
+// agora sobrescreve no mesmo lugar, mantendo o original com sufixos
+const outputDir = "./src/imgs"; 
 
 // breakpoints que você quer gerar
 const sizes = [450, 720, 900]; 
@@ -17,12 +18,15 @@ function optimizeImage(file) {
   const ext = path.extname(file);
   const baseName = path.basename(file, ext);
 
+  // ignora arquivos já otimizados (que têm -450, -720, -900 no nome)
+  if (/-\d+\.(webp|jpeg|png)$/i.test(file)) return;
+
   sizes.forEach((size) => {
     formats.forEach((format) => {
       const outputPath = path.join(outputDir, `${baseName}-${size}.${format}`);
 
       sharp(inputPath)
-        .resize(size) // redimensiona na largura, altura ajusta automaticamente
+        .resize(size) // redimensiona na largura
         .toFormat(format, { quality: 80 }) // qualidade ajustável
         .toFile(outputPath)
         .then(() => console.log(`✅ Gerado: ${outputPath}`))
