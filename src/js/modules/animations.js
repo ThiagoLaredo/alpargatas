@@ -64,6 +64,7 @@ export const initPageOpenAnimations = () => {
   });
 };
 
+
 export const initScrollButtonAnimation = () => {
   const arrow = document.querySelector('.scroll-button img');
 
