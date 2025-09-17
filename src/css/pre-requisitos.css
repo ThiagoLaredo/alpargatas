@@ -45,6 +45,11 @@
     color: var(--branco);
     text-align: left;
 }
+
+.pre-requisitos-card li strong {
+    font-weight: 500;
+    display: inline;
+}
   
 .lista-pre-requisitos {
     display: flex;
